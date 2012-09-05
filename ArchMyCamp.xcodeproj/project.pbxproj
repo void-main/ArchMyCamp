@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF3CBD8315F729C600A8E582 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CBD8215F729C600A8E582 /* Cocoa.framework */; };
+		DF3CBD8D15F729C600A8E582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBD8B15F729C600A8E582 /* InfoPlist.strings */; };
+		DF3CBD8F15F729C600A8E582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CBD8E15F729C600A8E582 /* main.m */; };
+		DF3CBD9315F729C600A8E582 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBD9115F729C600A8E582 /* Credits.rtf */; };
+		DF3CBD9615F729C600A8E582 /* VMTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */; };
+		DF3CBD9915F729C600A8E582 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBD9715F729C600A8E582 /* MainMenu.xib */; };
+		DF3CBDA115F729C600A8E582 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CBDA015F729C600A8E582 /* SenTestingKit.framework */; };
+		DF3CBDA215F729C600A8E582 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CBD8215F729C600A8E582 /* Cocoa.framework */; };
+		DF3CBDAA15F729C600A8E582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBDA815F729C600A8E582 /* InfoPlist.strings */; };
+		DF3CBDAD15F729C600A8E582 /* ArchMyCampTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CBDAC15F729C600A8E582 /* ArchMyCampTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF3CBDA315F729C600A8E582 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF3CBD7515F729C600A8E582 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF3CBD7D15F729C600A8E582;
+			remoteInfo = ArchMyCamp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF3CBD7E15F729C600A8E582 /* ArchMyCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchMyCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3CBD8215F729C600A8E582 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DF3CBD8515F729C600A8E582 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DF3CBD8615F729C600A8E582 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DF3CBD8715F729C600A8E582 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DF3CBD8A15F729C600A8E582 /* ArchMyCamp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchMyCamp-Info.plist"; sourceTree = "<group>"; };
+		DF3CBD8C15F729C600A8E582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF3CBD8E15F729C600A8E582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DF3CBD9015F729C600A8E582 /* ArchMyCamp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArchMyCamp-Prefix.pch"; sourceTree = "<group>"; };
+		DF3CBD9215F729C600A8E582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DF3CBD9415F729C600A8E582 /* VMTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMTAppDelegate.h; sourceTree = "<group>"; };
+		DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMTAppDelegate.m; sourceTree = "<group>"; };
+		DF3CBD9815F729C600A8E582 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DF3CBD9F15F729C600A8E582 /* ArchMyCampTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchMyCampTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF3CBDA015F729C600A8E582 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DF3CBDA715F729C600A8E582 /* ArchMyCampTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchMyCampTests-Info.plist"; sourceTree = "<group>"; };
+		DF3CBDA915F729C600A8E582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DF3CBDAB15F729C600A8E582 /* ArchMyCampTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchMyCampTests.h; sourceTree = "<group>"; };
+		DF3CBDAC15F729C600A8E582 /* ArchMyCampTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchMyCampTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF3CBD7B15F729C600A8E582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBD8315F729C600A8E582 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3CBD9B15F729C600A8E582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBDA115F729C600A8E582 /* SenTestingKit.framework in Frameworks */,
+				DF3CBDA215F729C600A8E582 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF3CBD7315F729C600A8E582 = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD8815F729C600A8E582 /* ArchMyCamp */,
+				DF3CBDA515F729C600A8E582 /* ArchMyCampTests */,
+				DF3CBD8115F729C600A8E582 /* Frameworks */,
+				DF3CBD7F15F729C600A8E582 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF3CBD7F15F729C600A8E582 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD7E15F729C600A8E582 /* ArchMyCamp.app */,
+				DF3CBD9F15F729C600A8E582 /* ArchMyCampTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF3CBD8115F729C600A8E582 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD8215F729C600A8E582 /* Cocoa.framework */,
+				DF3CBDA015F729C600A8E582 /* SenTestingKit.framework */,
+				DF3CBD8415F729C600A8E582 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DF3CBD8415F729C600A8E582 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD8515F729C600A8E582 /* AppKit.framework */,
+				DF3CBD8615F729C600A8E582 /* CoreData.framework */,
+				DF3CBD8715F729C600A8E582 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DF3CBD8815F729C600A8E582 /* ArchMyCamp */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD9415F729C600A8E582 /* VMTAppDelegate.h */,
+				DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */,
+				DF3CBD9715F729C600A8E582 /* MainMenu.xib */,
+				DF3CBD8915F729C600A8E582 /* Supporting Files */,
+			);
+			path = ArchMyCamp;
+			sourceTree = "<group>";
+		};
+		DF3CBD8915F729C600A8E582 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD8A15F729C600A8E582 /* ArchMyCamp-Info.plist */,
+				DF3CBD8B15F729C600A8E582 /* InfoPlist.strings */,
+				DF3CBD8E15F729C600A8E582 /* main.m */,
+				DF3CBD9015F729C600A8E582 /* ArchMyCamp-Prefix.pch */,
+				DF3CBD9115F729C600A8E582 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF3CBDA515F729C600A8E582 /* ArchMyCampTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBDAB15F729C600A8E582 /* ArchMyCampTests.h */,
+				DF3CBDAC15F729C600A8E582 /* ArchMyCampTests.m */,
+				DF3CBDA615F729C600A8E582 /* Supporting Files */,
+			);
+			path = ArchMyCampTests;
+			sourceTree = "<group>";
+		};
+		DF3CBDA615F729C600A8E582 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBDA715F729C600A8E582 /* ArchMyCampTests-Info.plist */,
+				DF3CBDA815F729C600A8E582 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF3CBD7D15F729C600A8E582 /* ArchMyCamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3CBDB015F729C600A8E582 /* Build configuration list for PBXNativeTarget "ArchMyCamp" */;
+			buildPhases = (
+				DF3CBD7A15F729C600A8E582 /* Sources */,
+				DF3CBD7B15F729C600A8E582 /* Frameworks */,
+				DF3CBD7C15F729C600A8E582 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArchMyCamp;
+			productName = ArchMyCamp;
+			productReference = DF3CBD7E15F729C600A8E582 /* ArchMyCamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF3CBD9E15F729C600A8E582 /* ArchMyCampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF3CBDB315F729C600A8E582 /* Build configuration list for PBXNativeTarget "ArchMyCampTests" */;
+			buildPhases = (
+				DF3CBD9A15F729C600A8E582 /* Sources */,
+				DF3CBD9B15F729C600A8E582 /* Frameworks */,
+				DF3CBD9C15F729C600A8E582 /* Resources */,
+				DF3CBD9D15F729C600A8E582 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF3CBDA415F729C600A8E582 /* PBXTargetDependency */,
+			);
+			name = ArchMyCampTests;
+			productName = ArchMyCampTests;
+			productReference = DF3CBD9F15F729C600A8E582 /* ArchMyCampTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF3CBD7515F729C600A8E582 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VMT;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Void Main";
+			};
+			buildConfigurationList = DF3CBD7815F729C600A8E582 /* Build configuration list for PBXProject "ArchMyCamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DF3CBD7315F729C600A8E582;
+			productRefGroup = DF3CBD7F15F729C600A8E582 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF3CBD7D15F729C600A8E582 /* ArchMyCamp */,
+				DF3CBD9E15F729C600A8E582 /* ArchMyCampTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF3CBD7C15F729C600A8E582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBD8D15F729C600A8E582 /* InfoPlist.strings in Resources */,
+				DF3CBD9315F729C600A8E582 /* Credits.rtf in Resources */,
+				DF3CBD9915F729C600A8E582 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3CBD9C15F729C600A8E582 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBDAA15F729C600A8E582 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF3CBD9D15F729C600A8E582 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF3CBD7A15F729C600A8E582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBD8F15F729C600A8E582 /* main.m in Sources */,
+				DF3CBD9615F729C600A8E582 /* VMTAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF3CBD9A15F729C600A8E582 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF3CBDAD15F729C600A8E582 /* ArchMyCampTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF3CBDA415F729C600A8E582 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF3CBD7D15F729C600A8E582 /* ArchMyCamp */;
+			targetProxy = DF3CBDA315F729C600A8E582 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF3CBD8B15F729C600A8E582 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3CBD8C15F729C600A8E582 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DF3CBD9115F729C600A8E582 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3CBD9215F729C600A8E582 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DF3CBD9715F729C600A8E582 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3CBD9815F729C600A8E582 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DF3CBDA815F729C600A8E582 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF3CBDA915F729C600A8E582 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF3CBDAE15F729C600A8E582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DF3CBDAF15F729C600A8E582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DF3CBDB115F729C600A8E582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
+				INFOPLIST_FILE = "ArchMyCamp/ArchMyCamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DF3CBDB215F729C600A8E582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
+				INFOPLIST_FILE = "ArchMyCamp/ArchMyCamp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DF3CBDB415F729C600A8E582 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArchMyCamp.app/Contents/MacOS/ArchMyCamp";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
+				INFOPLIST_FILE = "ArchMyCampTests/ArchMyCampTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DF3CBDB515F729C600A8E582 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ArchMyCamp.app/Contents/MacOS/ArchMyCamp";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
+				INFOPLIST_FILE = "ArchMyCampTests/ArchMyCampTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF3CBD7815F729C600A8E582 /* Build configuration list for PBXProject "ArchMyCamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3CBDAE15F729C600A8E582 /* Debug */,
+				DF3CBDAF15F729C600A8E582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF3CBDB015F729C600A8E582 /* Build configuration list for PBXNativeTarget "ArchMyCamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3CBDB115F729C600A8E582 /* Debug */,
+				DF3CBDB215F729C600A8E582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF3CBDB315F729C600A8E582 /* Build configuration list for PBXNativeTarget "ArchMyCampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF3CBDB415F729C600A8E582 /* Debug */,
+				DF3CBDB515F729C600A8E582 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DF3CBD7515F729C600A8E582 /* Project object */;
+}
