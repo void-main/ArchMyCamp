@@ -10,24 +10,35 @@
 
 @implementation VMTAppDelegate
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
-    
-}
-
 - (IBAction)doLogin:(id)sender {
-    [self signInToCustomService];
+    [self signInToBasecamp];
 }
 
 
 #pragma mark -
 #pragma mark OAuth 2.0
-NSString *kClientID = @"db52676f22fb5f9597cac2885d17ad8f3d484074";     // pre-assigned by service
-NSString *kClientSecret = @"9d8eb103b287b31bd4932effc66abb14fb424c74"; // pre-assigned by service
-NSString *kKeychainItemName = @"me.voidmain.app.ArchMyCamp-Basecamp";  // Custom Api
 
-- (GTMOAuth2Authentication *)authForCustomService {
+// Pre-assigned api key id and secret
+static NSString *const kClientID = @"db52676f22fb5f9597cac2885d17ad8f3d484074";
+static NSString *const kClientSecret = @"9d8eb103b287b31bd4932effc66abb14fb424c74";
+static NSString *const kBasecampKeychainItemName = @"me.voidmain.app.ArchMyCamp-Basecamp";
+static NSString *const kBasecampServiceName = @"BasecampIntegrate Service";
+
+- (void) awakeFromNib {
+    GTMOAuth2Authentication *auth = [self authForBasecamp];
+    if (auth) {
+        BOOL didAuth = [GTMOAuth2WindowController authorizeFromKeychainForName:kBasecampKeychainItemName authentication:auth];
+        if (didAuth) {
+            // Bring up the Main View
+            NSLog(@"did auth");
+        }
+    }
     
+    [self setAuthentication:auth];
+}
+
+- (GTMOAuth2Authentication *)authForBasecamp {
+    // https://github.com/37signals/api/blob/master/sections/authentication.md#oauth-2
     NSURL *tokenURL = [NSURL URLWithString:@"https://launchpad.37signals.com/authorization/token"];
     
     // We'll make up an arbitrary redirectURI.  The controller will watch for
@@ -36,7 +47,7 @@ NSString *kKeychainItemName = @"me.voidmain.app.ArchMyCamp-Basecamp";  // Custom
     NSString *redirectURI = @"http://www.arch-my-camp.com/oauth";
     
     GTMOAuth2Authentication *auth;
-    auth = [GTMOAuth2Authentication authenticationWithServiceProvider:@"Basecamp Service"
+    auth = [GTMOAuth2Authentication authenticationWithServiceProvider:kBasecampServiceName
                                                              tokenURL:tokenURL
                                                           redirectURI:redirectURI
                                                              clientID:kClientID
@@ -44,53 +55,71 @@ NSString *kKeychainItemName = @"me.voidmain.app.ArchMyCamp-Basecamp";  // Custom
     return auth;
 }
 
-- (void)signInToCustomService {
+- (void) setAuthentication:(GTMOAuth2Authentication *)auth {
+    mAuth = auth;
+}
+
+- (BOOL)isSignedIn {
+    BOOL isSignedIn = mAuth.canAuthorize;
+    return isSignedIn;
+}
+
+- (void)signInToBasecamp {
     [self signOut];
     
-    GTMOAuth2Authentication *auth = [self authForCustomService];
-    
-    // Specify the appropriate scope string, if any, according to the service's API documentation
+    GTMOAuth2Authentication *auth = [self authForBasecamp];
     auth.scope = @"read";
     
     NSURL *authURL = [NSURL URLWithString:@"https://launchpad.37signals.com/authorization/new"];
     
     // Display the authentication view
     GTMOAuth2WindowController *viewController;
-    viewController = [[GTMOAuth2WindowController alloc] initWithAuthentication:auth authorizationURL:authURL keychainItemName:kKeychainItemName resourceBundle:nil];
+    viewController = [[GTMOAuth2WindowController alloc] initWithAuthentication:auth authorizationURL:authURL keychainItemName:kBasecampKeychainItemName resourceBundle:nil];
+    NSString *html = @"<html><body><div align=center>Loading sign-in page...</div></body></html>";
+    [viewController setInitialHTMLString:html];
     
     [viewController signInSheetModalForWindow:[self window] delegate:self finishedSelector:@selector(viewController:finishedWithAuth:error:)];
 }
 
 - (void) signOut {
-    [GTMOAuth2WindowController removeAuthFromKeychainForName:kKeychainItemName];
+    // Remove the stored Basecamp authentication from the keychain, if any
+    [GTMOAuth2WindowController removeAuthFromKeychainForName:kBasecampKeychainItemName];
+    
+    // Discard our retained authentication object
+    [self setAuthentication:nil];
 }
 
-- (void)viewController:(GTMOAuth2WindowController *)viewController
+- (void) viewController:(GTMOAuth2WindowController *)viewController
       finishedWithAuth:(GTMOAuth2Authentication *)auth
                  error:(NSError *)error {
     if (error != nil) {
-        // Sign-in failed
-        NSLog(@"Sign-in failed - %@", error);
+        // Authentication failed (perhaps the user denied access, or closed the
+        // window before granting access)
+        NSString *errorStr = [error localizedDescription];
+        
+        NSData *responseData = [[error userInfo] objectForKey:@"data"]; // kGTMHTTPFetcherStatusDataKey
+        if ([responseData length] > 0) {
+            // Show the body of the server's authentication failure response
+            errorStr = [[NSString alloc] initWithData:responseData
+                                              encoding:NSUTF8StringEncoding];
+        } else {
+            NSString *str = [[error userInfo] objectForKey:kGTMOAuth2ErrorMessageKey];
+            if ([str length] > 0) {
+                errorStr = str;
+            }
+        }
+        [errorLog setStringValue:@"Login Failed..."];
+        NSLog(@"Error - %@", errorStr);
+        
+        [self setAuthentication:nil];
     } else {
-        NSMutableURLRequest *myNSURLMutableRequest = [[NSMutableURLRequest alloc] init];
-        [auth authorizeRequest:myNSURLMutableRequest
-                      delegate:self
-             didFinishSelector:@selector(authentication:request:finishedWithError:)];
+        [errorLog setStringValue:@""];
+        
+        [self setAuthentication:auth];
+        
+        // Show Main View
+        NSLog(@"now, we can go to main view");
     }
 }
-
-- (void)authentication:(GTMOAuth2Authentication *)auth
-               request:(NSMutableURLRequest *)request
-     finishedWithError:(NSError *)error {
-    if (error != nil) {
-        NSLog(@"Authorization failed - %@", error);
-    } else {
-        NSLog(@"%@", [auth accessToken]);
-    }
-}
-
-- (void) awakeFromNib {
-}
-
 
 @end

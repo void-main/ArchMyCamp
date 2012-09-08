@@ -13,6 +13,9 @@
 
 @interface VMTAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSButton *loginBtn;
+    IBOutlet NSTextField *errorLog;
+    
+    GTMOAuth2Authentication *mAuth;
 }
 
 @property (assign) IBOutlet NSWindow *window;
