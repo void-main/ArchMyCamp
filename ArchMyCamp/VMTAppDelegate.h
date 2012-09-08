@@ -7,9 +7,16 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GTMOAuth2/GTMOAuth2Authentication.h"
+#import "GTMOAuth2/Mac/GTMOAuth2WindowController.h"
+#import "GTMOAuth2/GTMOAuth2Authentication.h"
 
-@interface VMTAppDelegate : NSObject <NSApplicationDelegate>
+@interface VMTAppDelegate : NSObject <NSApplicationDelegate> {
+    IBOutlet NSButton *loginBtn;
+}
 
 @property (assign) IBOutlet NSWindow *window;
+
+-(IBAction)doLogin:(id)sender;
 
 @end

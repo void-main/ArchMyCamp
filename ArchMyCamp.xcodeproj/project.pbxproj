@@ -17,6 +17,17 @@
 		DF3CBDA215F729C600A8E582 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CBD8215F729C600A8E582 /* Cocoa.framework */; };
 		DF3CBDAA15F729C600A8E582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBDA815F729C600A8E582 /* InfoPlist.strings */; };
 		DF3CBDAD15F729C600A8E582 /* ArchMyCampTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CBDAC15F729C600A8E582 /* ArchMyCampTests.m */; };
+		DF810B1D15FA129600D3C0CC /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = DF810B1115FA129600D3C0CC /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF810B1E15FA129600D3C0CC /* GTMHTTPFetchHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = DF810B1315FA129600D3C0CC /* GTMHTTPFetchHistory.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF810B1F15FA129600D3C0CC /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = DF810B1515FA129600D3C0CC /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF810B2015FA129600D3C0CC /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = DF810B1715FA129600D3C0CC /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF810B2115FA129600D3C0CC /* GTMOAuth2Framework-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF810B1915FA129600D3C0CC /* GTMOAuth2Framework-Info.plist */; };
+		DF810B2215FA129600D3C0CC /* GTMOAuth2Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF810B1A15FA129600D3C0CC /* GTMOAuth2Window.xib */; };
+		DF810B2315FA129600D3C0CC /* GTMOAuth2WindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF810B1C15FA129600D3C0CC /* GTMOAuth2WindowController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DF810B2515FA13DD00D3C0CC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF810B2415FA13DD00D3C0CC /* SystemConfiguration.framework */; };
+		DF810B2715FA142900D3C0CC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF810B2615FA142900D3C0CC /* Security.framework */; };
+		DF810B2F15FA15A400D3C0CC /* basecamp_logo_origin.png in Resources */ = {isa = PBXBuildFile; fileRef = DF810B2E15FA15A400D3C0CC /* basecamp_logo_origin.png */; };
+		DF810B3515FA277700D3C0CC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF810B3415FA277700D3C0CC /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +39,18 @@
 			remoteInfo = ArchMyCamp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DF3CBDBC15F72ACA00A8E582 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DF3CBD7E15F729C600A8E582 /* ArchMyCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchMyCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,22 @@
 		DF3CBDA915F729C600A8E582 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DF3CBDAB15F729C600A8E582 /* ArchMyCampTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArchMyCampTests.h; sourceTree = "<group>"; };
 		DF3CBDAC15F729C600A8E582 /* ArchMyCampTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArchMyCampTests.m; sourceTree = "<group>"; };
+		DF810B1015FA129600D3C0CC /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMHTTPFetcher.h; path = GTMOAuth2/GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		DF810B1115FA129600D3C0CC /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMHTTPFetcher.m; path = GTMOAuth2/GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		DF810B1215FA129600D3C0CC /* GTMHTTPFetchHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMHTTPFetchHistory.h; path = GTMOAuth2/GTMHTTPFetchHistory.h; sourceTree = "<group>"; };
+		DF810B1315FA129600D3C0CC /* GTMHTTPFetchHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMHTTPFetchHistory.m; path = GTMOAuth2/GTMHTTPFetchHistory.m; sourceTree = "<group>"; };
+		DF810B1415FA129600D3C0CC /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2Authentication.h; path = GTMOAuth2/GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		DF810B1515FA129600D3C0CC /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2Authentication.m; path = GTMOAuth2/GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		DF810B1615FA129600D3C0CC /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2SignIn.h; path = GTMOAuth2/GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		DF810B1715FA129600D3C0CC /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2SignIn.m; path = GTMOAuth2/GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		DF810B1915FA129600D3C0CC /* GTMOAuth2Framework-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GTMOAuth2Framework-Info.plist"; sourceTree = "<group>"; };
+		DF810B1A15FA129600D3C0CC /* GTMOAuth2Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2Window.xib; sourceTree = "<group>"; };
+		DF810B1B15FA129600D3C0CC /* GTMOAuth2WindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2WindowController.h; sourceTree = "<group>"; };
+		DF810B1C15FA129600D3C0CC /* GTMOAuth2WindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2WindowController.m; sourceTree = "<group>"; };
+		DF810B2415FA13DD00D3C0CC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DF810B2615FA142900D3C0CC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		DF810B2E15FA15A400D3C0CC /* basecamp_logo_origin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = basecamp_logo_origin.png; path = Images/basecamp_logo_origin.png; sourceTree = "<group>"; };
+		DF810B3415FA277700D3C0CC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +95,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF810B3515FA277700D3C0CC /* WebKit.framework in Frameworks */,
+				DF810B2715FA142900D3C0CC /* Security.framework in Frameworks */,
+				DF810B2515FA13DD00D3C0CC /* SystemConfiguration.framework in Frameworks */,
 				DF3CBD8315F729C600A8E582 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +136,7 @@
 		DF3CBD8115F729C600A8E582 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DF3CBDB915F72AAD00A8E582 /* Linked Frameworks */,
 				DF3CBD8215F729C600A8E582 /* Cocoa.framework */,
 				DF3CBDA015F729C600A8E582 /* SenTestingKit.framework */,
 				DF3CBD8415F729C600A8E582 /* Other Frameworks */,
@@ -114,9 +157,9 @@
 		DF3CBD8815F729C600A8E582 /* ArchMyCamp */ = {
 			isa = PBXGroup;
 			children = (
-				DF3CBD9415F729C600A8E582 /* VMTAppDelegate.h */,
-				DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */,
-				DF3CBD9715F729C600A8E582 /* MainMenu.xib */,
+				DF810AFB15FA0FBD00D3C0CC /* OAuth2 */,
+				DF58BFFA15F9DEA7004E9104 /* Resources */,
+				DFC8C92315F75D7A00386585 /* MainScreen */,
 				DF3CBD8915F729C600A8E582 /* Supporting Files */,
 			);
 			path = ArchMyCamp;
@@ -153,6 +196,70 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DF3CBDB915F72AAD00A8E582 /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF810B3415FA277700D3C0CC /* WebKit.framework */,
+				DF810B2615FA142900D3C0CC /* Security.framework */,
+				DF810B2415FA13DD00D3C0CC /* SystemConfiguration.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		DF58BFFA15F9DEA7004E9104 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DF58C00415F9DF02004E9104 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DF58C00415F9DF02004E9104 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DF810B2E15FA15A400D3C0CC /* basecamp_logo_origin.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DF810AFB15FA0FBD00D3C0CC /* OAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				DF810B1015FA129600D3C0CC /* GTMHTTPFetcher.h */,
+				DF810B1115FA129600D3C0CC /* GTMHTTPFetcher.m */,
+				DF810B1215FA129600D3C0CC /* GTMHTTPFetchHistory.h */,
+				DF810B1315FA129600D3C0CC /* GTMHTTPFetchHistory.m */,
+				DF810B1415FA129600D3C0CC /* GTMOAuth2Authentication.h */,
+				DF810B1515FA129600D3C0CC /* GTMOAuth2Authentication.m */,
+				DF810B1615FA129600D3C0CC /* GTMOAuth2SignIn.h */,
+				DF810B1715FA129600D3C0CC /* GTMOAuth2SignIn.m */,
+				DF810B1815FA129600D3C0CC /* Mac */,
+			);
+			name = OAuth2;
+			sourceTree = "<group>";
+		};
+		DF810B1815FA129600D3C0CC /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				DF810B1915FA129600D3C0CC /* GTMOAuth2Framework-Info.plist */,
+				DF810B1A15FA129600D3C0CC /* GTMOAuth2Window.xib */,
+				DF810B1B15FA129600D3C0CC /* GTMOAuth2WindowController.h */,
+				DF810B1C15FA129600D3C0CC /* GTMOAuth2WindowController.m */,
+			);
+			name = Mac;
+			path = GTMOAuth2/Mac;
+			sourceTree = "<group>";
+		};
+		DFC8C92315F75D7A00386585 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CBD9715F729C600A8E582 /* MainMenu.xib */,
+				DF3CBD9415F729C600A8E582 /* VMTAppDelegate.h */,
+				DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */,
+			);
+			name = MainScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +270,7 @@
 				DF3CBD7A15F729C600A8E582 /* Sources */,
 				DF3CBD7B15F729C600A8E582 /* Frameworks */,
 				DF3CBD7C15F729C600A8E582 /* Resources */,
+				DF3CBDBC15F72ACA00A8E582 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -228,6 +336,9 @@
 				DF3CBD8D15F729C600A8E582 /* InfoPlist.strings in Resources */,
 				DF3CBD9315F729C600A8E582 /* Credits.rtf in Resources */,
 				DF3CBD9915F729C600A8E582 /* MainMenu.xib in Resources */,
+				DF810B2115FA129600D3C0CC /* GTMOAuth2Framework-Info.plist in Resources */,
+				DF810B2215FA129600D3C0CC /* GTMOAuth2Window.xib in Resources */,
+				DF810B2F15FA15A400D3C0CC /* basecamp_logo_origin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +375,11 @@
 			files = (
 				DF3CBD8F15F729C600A8E582 /* main.m in Sources */,
 				DF3CBD9615F729C600A8E582 /* VMTAppDelegate.m in Sources */,
+				DF810B1D15FA129600D3C0CC /* GTMHTTPFetcher.m in Sources */,
+				DF810B1E15FA129600D3C0CC /* GTMHTTPFetchHistory.m in Sources */,
+				DF810B1F15FA129600D3C0CC /* GTMOAuth2Authentication.m in Sources */,
+				DF810B2015FA129600D3C0CC /* GTMOAuth2SignIn.m in Sources */,
+				DF810B2315FA129600D3C0CC /* GTMOAuth2WindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +490,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
 				INFOPLIST_FILE = "ArchMyCamp/ArchMyCamp-Info.plist";
@@ -386,6 +506,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ArchMyCamp/ArchMyCamp-Prefix.pch";
 				INFOPLIST_FILE = "ArchMyCamp/ArchMyCamp-Info.plist";
@@ -443,6 +567,7 @@
 				DF3CBDB215F729C600A8E582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF3CBDB315F729C600A8E582 /* Build configuration list for PBXNativeTarget "ArchMyCampTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +576,7 @@
 				DF3CBDB515F729C600A8E582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
