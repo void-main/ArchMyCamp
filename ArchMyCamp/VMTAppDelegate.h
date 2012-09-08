@@ -11,11 +11,14 @@
 #import "GTMOAuth2/Mac/GTMOAuth2WindowController.h"
 #import "GTMOAuth2/GTMOAuth2Authentication.h"
 
+@class VMTMainScreenWindowController;
+
 @interface VMTAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSButton *loginBtn;
     IBOutlet NSTextField *errorLog;
     
     GTMOAuth2Authentication *mAuth;
+    VMTMainScreenWindowController *mainController;
 }
 
 @property (assign) IBOutlet NSWindow *window;

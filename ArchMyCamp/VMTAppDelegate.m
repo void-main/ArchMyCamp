@@ -7,6 +7,7 @@
 //
 
 #import "VMTAppDelegate.h"
+#import "VMTMainScreenWindowController.h"
 
 @implementation VMTAppDelegate
 
@@ -31,6 +32,7 @@ static NSString *const kBasecampServiceName = @"BasecampIntegrate Service";
         if (didAuth) {
             // Bring up the Main View
             NSLog(@"did auth");
+            [self gotoMainWindow];
         }
     }
     
@@ -119,7 +121,19 @@ static NSString *const kBasecampServiceName = @"BasecampIntegrate Service";
         
         // Show Main View
         NSLog(@"now, we can go to main view");
+        [self gotoMainWindow];
     }
+}
+
+- (void) gotoMainWindow {
+    if (!mainController) {
+        mainController = [[VMTMainScreenWindowController alloc] initWithWindowNibName:@"VMTMainScreenWindowController"];
+    }
+    
+    
+    [[self window] setReleasedWhenClosed:YES] ;
+    [[self window] close];
+    [self setWindow:[mainController window]];
 }
 
 @end

@@ -13,6 +13,8 @@
 		DF1A314315FAE37D001C814B /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1A313D15FAE37D001C814B /* SBJsonParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF1A314415FAE37D001C814B /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1A313F15FAE37D001C814B /* SBJsonWriter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		DF1A314A15FAECAB001C814B /* VMTDefaultHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1A314915FAECAB001C814B /* VMTDefaultHelper.m */; };
+		DF1A314F15FAF5FC001C814B /* VMTMainScreenWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DF1A314D15FAF5FC001C814B /* VMTMainScreenWindowController.m */; };
+		DF1A315015FAF5FC001C814B /* VMTMainScreenWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF1A314E15FAF5FC001C814B /* VMTMainScreenWindowController.xib */; };
 		DF3CBD8315F729C600A8E582 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3CBD8215F729C600A8E582 /* Cocoa.framework */; };
 		DF3CBD8D15F729C600A8E582 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DF3CBD8B15F729C600A8E582 /* InfoPlist.strings */; };
 		DF3CBD8F15F729C600A8E582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DF3CBD8E15F729C600A8E582 /* main.m */; };
@@ -72,6 +74,9 @@
 		DF1A313F15FAE37D001C814B /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		DF1A314815FAECAB001C814B /* VMTDefaultHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMTDefaultHelper.h; path = Utils/VMTDefaultHelper.h; sourceTree = "<group>"; };
 		DF1A314915FAECAB001C814B /* VMTDefaultHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMTDefaultHelper.m; path = Utils/VMTDefaultHelper.m; sourceTree = "<group>"; };
+		DF1A314C15FAF5FC001C814B /* VMTMainScreenWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VMTMainScreenWindowController.h; path = ArchMyCamp/VMTMainScreenWindowController.h; sourceTree = "<group>"; };
+		DF1A314D15FAF5FC001C814B /* VMTMainScreenWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VMTMainScreenWindowController.m; path = ArchMyCamp/VMTMainScreenWindowController.m; sourceTree = "<group>"; };
+		DF1A314E15FAF5FC001C814B /* VMTMainScreenWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VMTMainScreenWindowController.xib; path = ArchMyCamp/VMTMainScreenWindowController.xib; sourceTree = "<group>"; };
 		DF3CBD7E15F729C600A8E582 /* ArchMyCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchMyCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF3CBD8215F729C600A8E582 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		DF3CBD8515F729C600A8E582 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -168,6 +173,17 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		DF1A314B15FAF5B7001C814B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				DF1A314C15FAF5FC001C814B /* VMTMainScreenWindowController.h */,
+				DF1A314D15FAF5FC001C814B /* VMTMainScreenWindowController.m */,
+				DF1A314E15FAF5FC001C814B /* VMTMainScreenWindowController.xib */,
+			);
+			name = MainScreen;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DF3CBD7315F729C600A8E582 = {
 			isa = PBXGroup;
 			children = (
@@ -211,11 +227,12 @@
 		DF3CBD8815F729C600A8E582 /* ArchMyCamp */ = {
 			isa = PBXGroup;
 			children = (
+				DF1A314B15FAF5B7001C814B /* MainScreen */,
 				DF1A314715FAEC7B001C814B /* Utils */,
 				DF1A314615FAEC70001C814B /* Core */,
 				DF810AFB15FA0FBD00D3C0CC /* OAuth2 */,
 				DF58BFFA15F9DEA7004E9104 /* Resources */,
-				DFC8C92315F75D7A00386585 /* MainScreen */,
+				DFC8C92315F75D7A00386585 /* LoginScreen */,
 				DF3CBD8915F729C600A8E582 /* Supporting Files */,
 			);
 			path = ArchMyCamp;
@@ -307,14 +324,14 @@
 			path = GTMOAuth2/Mac;
 			sourceTree = "<group>";
 		};
-		DFC8C92315F75D7A00386585 /* MainScreen */ = {
+		DFC8C92315F75D7A00386585 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
 				DF3CBD9715F729C600A8E582 /* MainMenu.xib */,
 				DF3CBD9415F729C600A8E582 /* VMTAppDelegate.h */,
 				DF3CBD9515F729C600A8E582 /* VMTAppDelegate.m */,
 			);
-			name = MainScreen;
+			name = LoginScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +413,7 @@
 				DF810B2115FA129600D3C0CC /* GTMOAuth2Framework-Info.plist in Resources */,
 				DF810B2215FA129600D3C0CC /* GTMOAuth2Window.xib in Resources */,
 				DF810B2F15FA15A400D3C0CC /* basecamp_logo_origin.png in Resources */,
+				DF1A315015FAF5FC001C814B /* VMTMainScreenWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +461,7 @@
 				DF1A314315FAE37D001C814B /* SBJsonParser.m in Sources */,
 				DF1A314415FAE37D001C814B /* SBJsonWriter.m in Sources */,
 				DF1A314A15FAECAB001C814B /* VMTDefaultHelper.m in Sources */,
+				DF1A314F15FAF5FC001C814B /* VMTMainScreenWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
