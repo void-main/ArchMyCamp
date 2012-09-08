@@ -31,7 +31,7 @@ static NSString *const kBasecampServiceName = @"BasecampIntegrate Service";
         BOOL didAuth = [GTMOAuth2WindowController authorizeFromKeychainForName:kBasecampKeychainItemName authentication:auth];
         if (didAuth) {
             // Bring up the Main View
-            NSLog(@"did auth");
+            [self setAuthentication:auth];
             [self gotoMainWindow];
         }
     }
@@ -130,10 +130,46 @@ static NSString *const kBasecampServiceName = @"BasecampIntegrate Service";
         mainController = [[VMTMainScreenWindowController alloc] initWithWindowNibName:@"VMTMainScreenWindowController"];
     }
     
+    [self doAnAuthenticatedAPIFetch];
     
     [[self window] setReleasedWhenClosed:YES] ;
     [[self window] close];
     [self setWindow:[mainController window]];
 }
+
+
+- (void)doAnAuthenticatedAPIFetch {
+    NSString *urlStr = @"https://launchpad.37signals.com/authorization.json";
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [mAuth authorizeRequest:request
+                  delegate:self
+         didFinishSelector:@selector(authentication:request:finishedWithError:)];
+}
+
+- (void)authentication:(GTMOAuth2Authentication *)auth
+               request:(NSMutableURLRequest *)request
+     finishedWithError:(NSError *)error {
+    if (error != nil) {
+        NSLog(@"Error - %@", error);
+    } else {
+        NSLog(@"Auth Succeeded...");
+        
+        NSError *error = nil;
+        NSURLResponse *response = nil;
+        NSData *data = [NSURLConnection sendSynchronousRequest:request
+                                             returningResponse:&response
+                                                         error:&error];
+        if (data) {
+            NSString *str = [[NSString alloc] initWithData:data
+                                                   encoding:NSUTF8StringEncoding];
+            NSLog(@"Data - %@", str);
+        } else {
+            NSLog(@"Fetch Error - %@", [error description]);
+        }
+    }
+}
+
 
 @end
